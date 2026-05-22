@@ -2,8 +2,8 @@
 // Схема: форма → Telegram Bot API → сообщение админу
 // Никакого backend не нужно
 
-const TELEGRAM_BOT_TOKEN = 'ВСТАВЬ_ТОКЕН_СЮДА';
-const ADMIN_CHAT_ID = 'ВСТАВЬ_CHAT_ID_СЮДА';
+const TELEGRAM_BOT_TOKEN = '8936243340:AAGvjYAVhxdsv921ZL-veKYvjzRHRXBGeqc';
+const ADMIN_CHAT_ID = '1284660534';
 
 // Отправка в Telegram
 async function sendToTelegram(data) {
