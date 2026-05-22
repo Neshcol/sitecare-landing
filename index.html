@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SiteCare — подписочная поддержка сайтов малого бизнеса. Любые правки за 1 день. Фикс-цена от 4 900 ₽/мес.">
+  <meta property="og:title" content="SiteCare — Сайт под присмотром">
+  <meta property="og:description" content="Подписочная поддержка сайтов. Любые правки за 1 рабочий день. Фикс-цена от 4 900 ₽/мес.">
+  <title>SiteCare — Сайт под присмотром. Без панических звонков разработчику.</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=instrument-serif:400,400i|jetbrains-mono:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo" aria-label="SiteCare — на главную">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span class="logo-text">SiteCare</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#process">Как работает</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <button class="btn btn-primary" data-modal="contact">Оставить заявку</button>
+      <button class="nav-burger" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+      <ul role="list">
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#process">Как работает</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><button class="btn btn-primary" data-modal="contact">Оставить заявку</button></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="mono-label reveal">// ПОДПИСКА · ПОДДЕРЖКА САЙТОВ · 2026</p>
+          <h1 class="reveal reveal-delay-1">Сайт под присмотром.<br>Без панических звонков разработчику.</h1>
+          <p class="hero-sub reveal reveal-delay-2">Любые правки за 1 рабочий день. Фикс-цена от 4 900 ₽/мес. Без скрытых счетов, без поиска фрилансеров под каждый чих.</p>
+          <div class="hero-actions reveal reveal-delay-3">
+            <button class="btn btn-primary btn-lg" data-modal="contact">Оставить заявку</button>
+            <a href="#process" class="btn btn-ghost btn-lg smooth-scroll">Как это работает →</a>
+          </div>
+          <div class="hero-facts reveal reveal-delay-4">
+            <span class="fact"><span class="dot" aria-hidden="true"></span>реакция от 1 часа</span>
+            <span class="fact"><span class="dot" aria-hidden="true"></span>фикс-цена</span>
+            <span class="fact"><span class="dot" aria-hidden="true"></span>первая правка бесплатно</span>
+          </div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2" aria-hidden="true">
+          <svg class="dashboard-mock" viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="320" rx="14" fill="#11151c" stroke="#1f2530" stroke-width="1.5"/>
+            <rect width="480" height="46" rx="14" fill="#1a1f29"/>
+            <rect y="32" width="480" height="14" fill="#1a1f29"/>
+            <circle cx="20" cy="23" r="5" fill="#ff6b6b" opacity="0.7"/>
+            <circle cx="36" cy="23" r="5" fill="#ffb547" opacity="0.7"/>
+            <circle cx="52" cy="23" r="5" fill="#6ef0a3" opacity="0.7"/>
+            <text x="70" y="28" font-family="JetBrains Mono, monospace" font-size="12" fill="#8b95a7">SiteCare Monitor</text>
+            <text x="376" y="28" font-family="JetBrains Mono, monospace" font-size="11" fill="#555e6f">14:32:07</text>
+            <text x="20" y="72" font-family="JetBrains Mono, monospace" font-size="9" fill="#555e6f" letter-spacing="0.1em">САЙТ</text>
+            <text x="248" y="72" font-family="JetBrains Mono, monospace" font-size="9" fill="#555e6f" letter-spacing="0.1em">СТАТУС</text>
+            <text x="348" y="72" font-family="JetBrains Mono, monospace" font-size="9" fill="#555e6f" letter-spacing="0.1em">ФОРМА</text>
+            <line x1="16" y1="80" x2="464" y2="80" stroke="#1f2530" stroke-width="1"/>
+            <!-- row 1 -->
+            <circle cx="28" cy="104" r="5" fill="#6ef0a3"><animate attributeName="opacity" values="1;0.4;1" dur="3s" repeatCount="indefinite"/></circle>
+            <text x="44" y="109" font-family="JetBrains Mono, monospace" font-size="12" fill="#e8ecf2">stom-premium.ru</text>
+            <text x="248" y="109" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">200 OK</text>
+            <text x="348" y="109" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">● работает</text>
+            <!-- row 2 -->
+            <circle cx="28" cy="136" r="5" fill="#6ef0a3"><animate attributeName="opacity" values="1;0.4;1" dur="2.7s" begin="0.5s" repeatCount="indefinite"/></circle>
+            <text x="44" y="141" font-family="JetBrains Mono, monospace" font-size="12" fill="#e8ecf2">avtoservice-nn.ru</text>
+            <text x="248" y="141" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">200 OK</text>
+            <text x="348" y="141" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">● работает</text>
+            <!-- row 3 -->
+            <circle cx="28" cy="168" r="5" fill="#6ef0a3"><animate attributeName="opacity" values="1;0.4;1" dur="3.2s" begin="1s" repeatCount="indefinite"/></circle>
+            <text x="44" y="173" font-family="JetBrains Mono, monospace" font-size="12" fill="#e8ecf2">clinic-zdorove.ru</text>
+            <text x="248" y="173" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">200 OK</text>
+            <text x="348" y="173" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">● работает</text>
+            <!-- row 4 -->
+            <circle cx="28" cy="200" r="5" fill="#6ef0a3"><animate attributeName="opacity" values="1;0.4;1" dur="2.9s" begin="0.3s" repeatCount="indefinite"/></circle>
+            <text x="44" y="205" font-family="JetBrains Mono, monospace" font-size="12" fill="#e8ecf2">fitnes-sport.ru</text>
+            <text x="248" y="205" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">200 OK</text>
+            <text x="348" y="205" font-family="JetBrains Mono, monospace" font-size="11" fill="#6ef0a3">● работает</text>
+            <!-- row 5 warning -->
+            <circle cx="28" cy="232" r="5" fill="#ffb547"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></circle>
+            <text x="44" y="237" font-family="JetBrains Mono, monospace" font-size="12" fill="#8b95a7">jurist-konsult.ru</text>
+            <text x="248" y="237" font-family="JetBrains Mono, monospace" font-size="11" fill="#ffb547">302 →</text>
+            <text x="348" y="237" font-family="JetBrains Mono, monospace" font-size="11" fill="#ffb547">⚠ проверяем</text>
+            <!-- bottom bar -->
+            <line x1="16" y1="260" x2="464" y2="260" stroke="#1f2530" stroke-width="1"/>
+            <text x="20" y="286" font-family="JetBrains Mono, monospace" font-size="10" fill="#555e6f">обновлено: сегодня в 14:32</text>
+            <text x="360" y="286" font-family="JetBrains Mono, monospace" font-size="10" fill="#6ef0a3">4/5 в норме</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 01 — БОЛИ -->
+    <section class="section" id="pain">
+      <div class="container">
+        <p class="mono-label reveal">// 01 — ЗНАКОМО?</p>
+        <h2 class="reveal reveal-delay-1">Пять ситуаций, ради которых клиенты приходят к нам.</h2>
+        <div class="pain-grid">
+          <article class="pain-card reveal">
+            <p class="pain-quote">«Разработчик не отвечает третий день, а у меня акция стартует завтра.»</p>
+            <p class="pain-resolve">→ С нами реакция от 1 часа.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-1">
+            <p class="pain-quote">«За правку цены в одном блоке студия выставила 15 000 ₽ и делала неделю.»</p>
+            <p class="pain-resolve">→ У нас фикс-подписка. Меняем за 2 часа.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-2">
+            <p class="pain-quote">«Не понимаю, работает ли форма заявок — лидов нет, а почему — загадка.»</p>
+            <p class="pain-resolve">→ Мониторим формы и доступность ежедневно.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-3">
+            <p class="pain-quote">«Сайт сломался после обновления, я не знаю, к кому бежать.»</p>
+            <p class="pain-resolve">→ Бежать никуда не нужно. Пишете в бот.</p>
+          </article>
+          <article class="pain-card reveal reveal-delay-4">
+            <p class="pain-quote">«Хочу поменять баннер, но даже не знаю с чего начать.»</p>
+            <p class="pain-resolve">→ Опишите словами. Остальное — наша работа.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02 — ПРОЦЕСС -->
+    <section class="section" id="process">
+      <div class="container">
+        <p class="mono-label reveal">// 02 — ПРОЦЕСС</p>
+        <h2 class="reveal reveal-delay-1">Три шага. Без созвонов и согласований по неделе.</h2>
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="step-number mono-label">01</div>
+            <div class="step-body">
+              <h3>Пишете в Telegram-бот</h3>
+              <p>Текстом или голосом. «Поменяй цену пиццы на 590» — и всё.</p>
+              <span class="step-time">~ 30 сек</span>
+            </div>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="process-step reveal reveal-delay-1">
+            <div class="step-number mono-label">02</div>
+            <div class="step-body">
+              <h3>Мы делаем правку</h3>
+              <p>Обычно за 2–4 часа в рабочее время. Без лишних вопросов.</p>
+              <span class="step-time">~ 2–4 часа</span>
+            </div>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="process-step reveal reveal-delay-2">
+            <div class="step-number mono-label">03</div>
+            <div class="step-body">
+              <h3>Проверяете и подтверждаете</h3>
+              <p>Присылаем ссылку, вы смотрите, закрываем тикет.</p>
+              <span class="step-time">~ 5 мин</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03 — ТАРИФЫ -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <p class="mono-label reveal">// 03 — ТАРИФЫ</p>
+        <h2 class="reveal reveal-delay-1">Подписка с фикс-ценой. Без счетов за каждую мелочь.</h2>
+        <div class="pricing-grid">
+
+          <article class="pricing-card reveal">
+            <div class="card-badge">БАЗОВЫЙ</div>
+            <h3 class="card-plan">Лайт</h3>
+            <div class="card-price"><span class="price-amount">4 900 ₽</span><span class="price-period"> / мес</span></div>
+            <p class="card-hours">до 2 часов работ в месяц</p>
+            <ul class="card-features" role="list">
+              <li>Микроправки текста, цен, фото</li>
+              <li>Мониторинг доступности сайта</li>
+              <li>Контроль работы форм заявок</li>
+              <li>Отчёт раз в месяц</li>
+            </ul>
+            <button class="btn btn-outline btn-full" data-modal="contact" data-plan="Лайт">Выбрать Лайт</button>
+          </article>
+
+          <article class="pricing-card pricing-card--featured reveal reveal-delay-1">
+            <div class="card-badge card-badge--featured">ПОПУЛЯРНЫЙ</div>
+            <h3 class="card-plan">Стандарт</h3>
+            <div class="card-price"><span class="price-amount">11 900 ₽</span><span class="price-period"> / мес</span></div>
+            <p class="card-hours">до 6 часов работ в месяц</p>
+            <ul class="card-features" role="list">
+              <li>Всё из Лайт</li>
+              <li>Правки форм и интеграций</li>
+              <li>Подключение и настройка аналитики</li>
+              <li>Мини-баннеры и акционные блоки</li>
+              <li>A/B тесты текстов</li>
+            </ul>
+            <button class="btn btn-primary btn-full" data-modal="contact" data-plan="Стандарт">Выбрать Стандарт</button>
+          </article>
+
+          <article class="pricing-card reveal reveal-delay-2">
+            <div class="card-badge">МАКСИМУМ</div>
+            <h3 class="card-plan">Премиум</h3>
+            <div class="card-price"><span class="price-amount">24 900 ₽</span><span class="price-period"> / мес</span></div>
+            <p class="card-hours">до 14 часов работ в месяц</p>
+            <ul class="card-features" role="list">
+              <li>Всё из Стандарт</li>
+              <li>Создание новых блоков и страниц</li>
+              <li>Дизайн-обновления</li>
+              <li>Контент: тексты и подбор изображений</li>
+              <li>SEO-микрооптимизация</li>
+            </ul>
+            <button class="btn btn-outline btn-full" data-modal="contact" data-plan="Премиум">Выбрать Премиум</button>
+          </article>
+
+        </div>
+        <p class="pricing-footnote reveal">
+          Все тарифы — минимум на 3 месяца. Оплата помесячно вперёд. При оплате за 6 месяцев — скидка 15%. Экстренный вызов вне очереди — +2 900 ₽ разово (реакция 1 час).
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 04 — ЧТО НЕ ВХОДИТ -->
+    <section class="section" id="limits">
+      <div class="container limits-container">
+        <p class="mono-label reveal">// 04 — ЧЕСТНО О ГРАНИЦАХ</p>
+        <h2 class="reveal reveal-delay-1">Это не входит в подписку. И мы это сразу говорим.</h2>
+        <ul class="limits-list reveal reveal-delay-2" role="list">
+          <li>Создание сайта с нуля <span class="limits-note">(это отдельная услуга — <a href="https://neshcol.ru" target="_blank" rel="noopener">neshcol.ru</a>)</span></li>
+          <li>Полные редизайны <span class="limits-note">(доступно ограниченно в Премиуме)</span></li>
+          <li>Контекстная реклама, SMM, email-рассылки</li>
+          <li>Хостинг и регистрация домена</li>
+        </ul>
+        <p class="limits-footer reveal reveal-delay-3">Если задача за пределами подписки — посчитаем отдельно и скажем честную цену.</p>
+      </div>
+    </section>
+
+    <!-- SECTION 05 — FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <p class="mono-label reveal">// 05 — FAQ</p>
+        <h2 class="reveal reveal-delay-1">Частые вопросы</h2>
+        <div class="faq-list reveal reveal-delay-2">
+
+          <details class="faq-item">
+            <summary class="faq-question">На каких платформах вы работаете?</summary>
+            <div class="faq-answer">
+              <p>Tilda, WordPress, Битрикс, самописные сайты на HTML/CSS, React. Если у вас что-то экзотическое — пришлите ссылку, скажем за 10 минут.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">А если за месяц я не использую часы — они сгорают?</summary>
+            <div class="faq-answer">
+              <p>Да, неиспользованные часы не переносятся. Подписка — это не банк часов, а гарантия скорости и доступа.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Что считается «правкой»? Где граница?</summary>
+            <div class="faq-answer">
+              <p>Правка — любое изменение в существующих блоках: тексты, цены, фото, формы, ссылки, мелкие стилевые корректировки. Создание новых блоков и страниц — только в Премиуме.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Что если я хочу прервать подписку?</summary>
+            <div class="faq-answer">
+              <p>Минимальный срок — 3 месяца. Дальше — расторжение в любой момент за 14 дней до конца оплаченного периода.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Кто будет работать с моим сайтом?</summary>
+            <div class="faq-answer">
+              <p>Андрей Дубровин (основатель Neshcol Development) и AI-инструменты под его контролем. Это позволяет держать фикс-цену.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Можно сначала попробовать?</summary>
+            <div class="faq-answer">
+              <p>Да. Первая правка — бесплатная. Присылаете задачу в Telegram, делаем, показываем результат. Дальше решаете.</p>
+            </div>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 06 — ФИНАЛЬНЫЙ CTA -->
+    <section class="section cta-section" id="cta">
+      <div class="container cta-container">
+        <h2 class="reveal">Перестаньте искать разработчика под каждую правку.</h2>
+        <p class="cta-sub reveal reveal-delay-1">Оставьте заявку — пришлём первую правку бесплатно за 1 рабочий день.</p>
+        <form class="cta-form reveal reveal-delay-2" id="cta-form" novalidate>
+          <input
+            type="url"
+            name="site_url"
+            id="cta-url"
+            class="cta-input"
+            placeholder="https://ваш-сайт.ru"
+            autocomplete="url"
+            required
+          >
+          <button type="submit" class="btn btn-primary btn-lg">Получить бесплатную правку</button>
+        </form>
+        <div class="cta-success" id="cta-success" aria-live="polite" hidden>
+          <span class="dot" aria-hidden="true"></span>
+          Принято. Напишем в течение часа.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo" aria-label="SiteCare">
+          <span class="logo-dot" aria-hidden="true"></span>
+          <span class="logo-text">SiteCare</span>
+        </a>
+        <p class="footer-tagline">Часть <a href="https://neshcol.ru" target="_blank" rel="noopener">Neshcol Development</a> — neshcol.ru</p>
+        <p class="footer-copy">© 2026 SiteCare</p>
+      </div>
+      <nav class="footer-links" aria-label="Навигация сайта">
+        <ul role="list">
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="legal/offer.html">Оферта</a></li>
+          <li><a href="#privacy">Политика данных</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contacts">
+        <a href="https://t.me/Neshcol" target="_blank" rel="noopener" class="footer-contact-link">Telegram @Neshcol</a>
+        <a href="mailto:andrey@neshcol.ru" class="footer-contact-link">andrey@neshcol.ru</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>ИП Дубровин А. / самозанятый — реквизиты в <a href="legal/offer.html">оферте</a>.</p>
+    </div>
+  </footer>
+
+  <!-- MODAL ЗАЯВКИ -->
+  <div class="modal-overlay" id="modal-contact" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-hidden="true">
+    <div class="modal">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <p class="mono-label">// ЗАЯВКА</p>
+      <h2 id="modal-title">Оставить заявку</h2>
+      <p class="modal-sub">Заполните форму — Андрей ответит в течение 1 часа в рабочее время.</p>
+      <form class="modal-form" id="modal-form" novalidate>
+        <div class="form-field">
+          <label for="modal-url">Ссылка на ваш сайт</label>
+          <input type="url" id="modal-url" name="site_url" placeholder="https://ваш-сайт.ru" required>
+        </div>
+        <div class="form-field">
+          <label for="modal-task">Что нужно сделать</label>
+          <textarea id="modal-task" name="task" rows="3" placeholder="Поменять цену, починить форму, обновить баннер..." required></textarea>
+        </div>
+        <div class="form-field">
+          <label for="modal-contact">Телефон или Telegram</label>
+          <input type="text" id="modal-contact" name="contact" placeholder="+7 999 123 45 67 или @username" required>
+        </div>
+        <input type="hidden" name="plan" id="modal-plan" value="">
+        <button type="submit" class="btn btn-primary btn-full btn-lg">Отправить заявку</button>
+        <p class="form-note">Нажимая кнопку, вы принимаете <a href="legal/offer.html" target="_blank">условия оферты</a>.</p>
+      </form>
+      <div class="modal-success" id="modal-success" hidden>
+        <div class="success-icon" aria-hidden="true"><span class="dot dot-lg"></span></div>
+        <h3>Принято.</h3>
+        <p>Андрей напишет в ближайший час. Если срочно — <a href="https://t.me/Neshcol" target="_blank" rel="noopener">@Neshcol</a> в Telegram.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODO: заменить на реальные кейсы (секция «Было / Стало» для 2 клиентов: стоматология + автосервис) -->
+
+  <script src="script.js"></script>
+</body>
+</html>
