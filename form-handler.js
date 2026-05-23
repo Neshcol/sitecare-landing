@@ -73,6 +73,11 @@ async function handleSubmit(form) {
     return;
   }
 
+  // Добавляем протокол, если пользователь его не написал
+  if (!/^https?:\/\//i.test(data.site)) {
+    data.site = 'https://' + data.site;
+  }
+
   // Блокируем кнопку
   const originalText = btn.textContent;
   btn.disabled = true;
