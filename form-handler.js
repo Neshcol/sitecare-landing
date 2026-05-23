@@ -1,45 +1,19 @@
 // SiteCare — обработчик форм заявок
-// Схема: форма → Telegram Bot API → сообщение админу
-// Никакого backend не нужно
+// Схема: форма → Cloudflare Worker → Telegram + Notion
+// Токены хранятся в Worker, здесь их нет
 
-const TELEGRAM_BOT_TOKEN = '8936243340:AAGvjYAVhxdsv921ZL-veKYvjzRHRXBGeqc';
-const ADMIN_CHAT_ID = '1284660534';
+const WORKER_URL = 'https://sitecare-form-handler.neshcol-dev.workers.dev';
 
-// Отправка в Telegram
+// Отправка на Worker (он пишет в Telegram и Notion)
 async function sendToTelegram(data) {
-  const text = `
-🆕 *Новая заявка SiteCare*
+  const res = await fetch(WORKER_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
 
-🌐 *Сайт:* ${escapeMarkdown(data.site)}
-📋 *Задача:* ${escapeMarkdown(data.task)}
-📞 *Контакт:* ${escapeMarkdown(data.contact)}
-🏷 *Тариф:* ${escapeMarkdown(data.tariff)}
-🎫 *Тикет:* ${data.ticketId}
-🕐 *Время:* ${new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' })} МСК
-
-#заявка #sitecare
-  `.trim();
-
-  const res = await fetch(
-    `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-    {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        chat_id: ADMIN_CHAT_ID,
-        text,
-        parse_mode: 'Markdown'
-      })
-    }
-  );
-
-  if (!res.ok) throw new Error('Telegram API: ' + res.status);
+  if (!res.ok) throw new Error('Worker error: ' + res.status);
   return res.json();
-}
-
-// Экранирование спецсимволов Markdown
-function escapeMarkdown(str) {
-  return String(str || '—').replace(/[_*[\]()~`>#+=|{}.!-]/g, '\\$&');
 }
 
 // Генерация ID тикета: N + 3 последних цифры timestamp
